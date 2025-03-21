@@ -142,14 +142,17 @@
                 </tr>
             </table>
 
-            <!-- Input Fields -->
-            <input type="text" id="fooditem" placeholder="Enter Food Item" required />
-            <input type="number" id="quantity" placeholder="Quantity" required />
+            <!-- Dynamic Food Item Input Section -->
+            <div id="foodInputs">
+                <input type="text" id="fooditem" placeholder="Enter Food Item" required />
+                <input type="number" id="quantity" placeholder="Quantity" required />
+            </div>
+
             <input type="text" id="location" placeholder="Enter Location" required />
             <input type="number" id="pincode" placeholder="Enter Pincode" required />
 
             <div class="btn-container">
-                <button type="button" id="addEntry">Add Entry</button>
+                <button type="button" id="addFood">Add Another Food Item</button>
                 <button type="submit" id="donate">Donate</button>
             </div>
         </form>
