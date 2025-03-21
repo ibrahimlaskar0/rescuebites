@@ -85,6 +85,15 @@
             background: var(--secondary-color);
         }
 
+        button {
+            margin-top: 13px;
+            padding: 10px;
+            background-color: #2e7d32;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+        }
+
     </style>
 </head>
 <body>
@@ -99,37 +108,39 @@
     <!-- Main Content -->
     <div class="container">
         <h2>Foods Donated</h2>
+
+        <form id="donatefood">
         <table>
             <tr>
-                <th>Sl. No</th>
                 <th>Food Item</th>
                 <th>Quantity</th>
                 <th>Location</th>
                 <th>Pincode</th>
             </tr>
             <tr>
-                <td>1</td>
-                <td>Rice</td>
-                <td>50 kg</td>
-                <td>Mumbai</td>
-                <td>400001</td>
+                <td><input type="text" name="fooditem" id="fooditem" placeholder="Food Item" required/></td>
+                <td>
+                <input type="number" name="quantity" id="quantity" placeholder="Quantity" required/>
+
+                </td>
+                <td>
+
+                    <input type="text" name="location" id="location" placeholder="Location" required/>
+                </td>
+                <td>
+
+                    <input type="number" name="pincode" id="pincode" placeholder="pincode" required/>
+                </td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Bread</td>
-                <td>100 Loaves</td>
-                <td>Delhi</td>
-                <td>110001</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Milk</td>
-                <td>30 Liters</td>
-                <td>Kolkata</td>
-                <td>700001</td>
-            </tr>
+            
         </table>
+
+        <button type="submit">Donate</button>
+        </form>
+
+       
     </div>
 
+    <script type="module" src="restaurantadmin.js"></script>
 </body>
 </html>
