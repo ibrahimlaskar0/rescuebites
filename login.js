@@ -22,6 +22,8 @@ login_form.addEventListener("submit", event => {
         const errorCode = error.code;
         const errorMessage = error.message;
         // ..
+        console.log(errorCode)
+        console.log("error occured")
         });
 
     // You can now send these values to a server or process them as needed
