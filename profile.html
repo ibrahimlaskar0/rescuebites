@@ -1,11 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Details - Rescue Bites</title>
+    <style>
+        :root {
+            --primary-color: rgb(255, 255, 255);
+            --text-color: rgb(0, 0, 0);
+            --secondary-color: rgb(224, 244, 230);
+            --button-color: rgb(40, 167, 69);
+            --border-color: rgb(200, 200, 200);
+        }
+
+        body {
+            background: var(--secondary-color);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+            padding: 10px;
+            border: 2px solid rgb(245, 236, 236);
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 120px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .user-info {
+            margin: 20px 0;
+        }
+
+        .user-info p {
+            font-size: 18px;
+            color: var(--text-color);
+            margin: 10px 0;
+        }
+
+        .edit-button {
+            background: var(--button-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .edit-button:hover {
+            background: darkgreen;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <nav class="navbar">
+        <div class="logo">Rescue Bites</div>
+    </nav>
+
+    <div class="container">
+        <h2>User Details</h2>
+        <div class="user-info">
+            <p><strong>Name:</strong> <span id="name"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Phone:</strong> <span id="phone"></span></p>
+            <p><strong>Location:</strong> <span id="location"></span></p>
+            <p><strong>Country:</strong> <span id="country"></span></p>
+        </div>
+        <button class="edit-button">Edit Details</button>
+    </div>
 </body>
+
 </html>
