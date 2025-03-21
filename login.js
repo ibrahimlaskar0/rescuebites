@@ -30,7 +30,7 @@ login_form.addEventListener("submit", event => {
 
         if(data.user_type === "restaurant")
         {
-            window.location.href = "/restaurantadminpanel.html"
+            window.location.href = "/restaurantadmin.html"
         } else 
         {
             window.location.href = "/loggedhome.html"
