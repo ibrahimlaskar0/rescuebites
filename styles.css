@@ -22,18 +22,20 @@ body {
 
 /* Profile Title */
 .profile-container h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #333;
 }
 
 /* Input Fields */
 .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
     margin-bottom: 15px;
-    text-align: left;
 }
 
 .input-group label {
-    display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: #555;
@@ -45,6 +47,18 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+    outline: none;
+}
+
+/* Two-column layout for Name & Email */
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input-row .input-group {
+    width: 48%;
 }
 
 /* Button */
@@ -68,5 +82,13 @@ button:hover {
 @media (max-width: 400px) {
     .profile-container {
         width: 90%;
+    }
+    
+    .input-row {
+        flex-direction: column;
+    }
+    
+    .input-row .input-group {
+        width: 100%;
     }
 }
