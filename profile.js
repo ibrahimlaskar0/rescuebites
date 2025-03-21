@@ -17,7 +17,7 @@ const getData = async () => {
       data = docSnap.data();
       
       document.getElementById("name").innerText = data.name;  // Keep user's real name
-      document.getElementById("type").innerText = data.type ? data.type.toUpperCase() : "N/A";  // Show NGO/Restaurant
+      document.getElementById("type").innerText = data.user_type ? data.user_type.toUpperCase() : "N/A";  // Show NGO/Restaurant
       document.getElementById("email").innerText = user.email;
       document.getElementById("phone").innerText = data.phone;
       document.getElementById("location").innerText = data.location;
