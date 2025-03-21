@@ -28,7 +28,7 @@ login_form.addEventListener("submit", event => {
         const errorMessage = error.message;
         // ..
         // window.location.href = "/loggedhome.html"
-        alert("something went wrong, please try again")
+        alert("Please check your email id or password")
         });
 
     // You can now send these values to a server or process them as needed

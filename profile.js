@@ -12,16 +12,16 @@ const getData = async() =>
     if (docSnap.exists()) {
       data = docSnap.data();
       
+      document.getElementById("name").innerText = data.name
+      document.getElementById("email").innerText = user.email
+      document.getElementById("phone").innerText = data.phone
+      document.getElementById("location").innerText = data.location
+      document.getElementById("country").innerText = data.country
     } else {
       // docSnap.data() will be undefined in this case
       console.log("No such document!");
     }
 
-    document.getElementById("name").innerText = data.name
-    document.getElementById("email").innerText = user.email
-    document.getElementById("phone").innerText = data.phone
-    document.getElementById("location").innerText = data.location
-    document.getElementById("country").innerText = data.country
 
 }
 

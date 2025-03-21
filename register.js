@@ -38,6 +38,6 @@ register_form.addEventListener("submit", event => {
         const errorCode = error.code;
         const errorMessage = error.message;
         // ..
-        alert("something went wrong, please try again")
+        alert("The account may already exist")
         });
 });
