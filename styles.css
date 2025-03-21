@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Styles
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
+} */
 
 /* Profile Card */
 .profile-container {
@@ -22,47 +22,33 @@ body {
 
 /* Profile Title */
 .profile-container h2 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: #333;
 }
 
 /* Input Fields */
-.input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+.profile-container .input-group {
     margin-bottom: 15px;
+    text-align: left;
 }
 
-.input-group label {
+.profile-container .input-group label {
+    display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: #555;
 }
 
-.input-group input {
+.profile-container .input-group input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-    outline: none;
-}
-
-/* Two-column layout for Name & Email */
-.input-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.input-row .input-group {
-    width: 48%;
 }
 
 /* Button */
-button {
+.profile-container button {
     width: 100%;
     padding: 10px;
     background: #28a745;
@@ -74,7 +60,7 @@ button {
     transition: 0.3s;
 }
 
-button:hover {
+.profile-container button:hover {
     background: #218838;
 }
 
@@ -82,13 +68,5 @@ button:hover {
 @media (max-width: 400px) {
     .profile-container {
         width: 90%;
-    }
-    
-    .input-row {
-        flex-direction: column;
-    }
-    
-    .input-row .input-group {
-        width: 100%;
     }
 }
