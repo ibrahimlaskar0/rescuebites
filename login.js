@@ -21,14 +21,14 @@ login_form.addEventListener("submit", event => {
 
         localStorage.setItem("user", JSON.stringify(user))
 
-        // window.location.href = "/loggedhome.html"
+        window.location.href = "/loggedhome.html"
         })
         .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         // ..
-        console.log(errorCode, errorMessage)
         // window.location.href = "/loggedhome.html"
+        alert("something went wrong, please try again")
         });
 
     // You can now send these values to a server or process them as needed
