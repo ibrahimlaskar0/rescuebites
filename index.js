@@ -20,9 +20,13 @@ async function getAllData()
     const ngoSnapshot = await getDocs(ngoq)
     const ngosize = ngoSnapshot.size
 
-    document.getElementById("meals").innerText = `${mealsDonated}`
-    document.getElementById("donor").innerText = `${restaurantSize}`
-    document.getElementById("ngos").innerText = `${ngosize}`
+    
+        document.getElementById("meals").innerText = `${mealsDonated}`
+        document.getElementById("donor").innerText = `${restaurantSize}`
+        document.getElementById("ngos").innerText = `${ngosize}`
+    // console.log(document.getElementById("meals"))
 }
 
-getAllData()
+addEventListener("DOMContentLoaded", () => {
+    getAllData()
+})
