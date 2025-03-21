@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword } from "firebase/auth"
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore/lite";
 import { auth, db } from "./firebaaseapp.js"
 
 const login_form = document.getElementById("login")
@@ -25,7 +25,7 @@ login_form.addEventListener("submit", event => {
         const docRef = doc(db, "users", user.uid);
         const docSnap = await getDoc(docRef)
         const data = docSnap.data();
-
+        console.log(data)
         localStorage.setItem("data", JSON.stringify(data))
 
         if(data.user_type === "restaurant")
@@ -41,6 +41,8 @@ login_form.addEventListener("submit", event => {
         const errorMessage = error.message;
         // ..
         // window.location.href = "/loggedhome.html"
+        console.log(errorCode)
+        console.log(errorMessage)
         alert("Please check your email id or password")
         });
 
