@@ -1,4 +1,4 @@
-/* General Styles
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-} */
+}
 
 /* Profile Card */
 .profile-container {
@@ -27,19 +27,19 @@ body {
 }
 
 /* Input Fields */
-.profile-container .input-group {
+.input-group {
     margin-bottom: 15px;
     text-align: left;
 }
 
-.profile-container .input-group label {
+.input-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: #555;
 }
 
-.profile-container .input-group input {
+.input-group input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -48,9 +48,10 @@ body {
 }
 
 /* Button */
-.profile-container button {
+button {
     width: 100%;
     padding: 10px;
+    margin-bottom: 2vh;
     background: #28a745;
     border: none;
     border-radius: 5px;
@@ -60,7 +61,7 @@ body {
     transition: 0.3s;
 }
 
-.profile-container button:hover {
+button:hover {
     background: #218838;
 }
 

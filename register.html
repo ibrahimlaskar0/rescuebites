@@ -3,72 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Register | FoodHarmony</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: rgb(224, 244, 230);
-            text-align: center;
-            padding: 50px;
-        }
-
-        .form-container {
-            background: white;
-            padding: 20px;
-            width: 300px;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: green;
-        }
-
-        input {
-            width: 90%;
-            padding: 8px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .btn {
-            background: green;
-            color: white;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background: darkgreen;
-        }
-
-        a {
-            display: block;
-            margin-top: 10px;
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-        }
-    </style>
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div class="form-container">
+    <form class="profile-container" id="register">
         <h2>Register</h2>
-        <form id="register">
-            <input type="text" placeholder="Username" id="username" required><br>
-            <!-- <input type="tel" placeholder="Phone Number" required><br> -->
-            <input type="email" placeholder="Email" id="email" required><br>
-            <input type="password" placeholder="Password" id="password" required><br>
-            <button type="submit" class="btn">Register</button>
-        </form>
+
+        <div class="input-row">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter a password">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+        </div>
+
+        <div class="input-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter your location">
+        </div>
+
+        <div class="input-group">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" placeholder="Enter your country">
+        </div>
+
+        <button type="submit">Register</button>
+
         <a href="login.html">Already have an account? Sign in here</a>
-    </div>
+    </form>
 
     <script type="module" src="register.js"></script>
 </body>

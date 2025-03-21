@@ -14,12 +14,14 @@ register_form.addEventListener("submit", event => {
 
     // sign in
     createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
+        .then(async(userCredential) => {
         // Signed up 
         const user = userCredential.user;
+        
+        // await setDoc(doc(db, "user", ))
         console.log(user)
 
-        window.location.href = "/profile.html"
+        window.location.href = "/login.html"
 
         })
         .catch((error) => {
