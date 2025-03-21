@@ -59,6 +59,8 @@ donationForm.addEventListener("submit", async (e) => {
         await setDoc(docRef, { donations: [...allDonations, ...donations] }, { merge: true });
 
         alert("Thanks for donating!");
+
+        window.location.reload()
     } catch (error) {
         console.error("Error adding donation:", error);
         alert("Something went wrong. Please try again.");
