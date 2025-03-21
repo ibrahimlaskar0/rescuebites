@@ -39,14 +39,9 @@ register_form.addEventListener("submit", (event) => {
             window.location.href = "/login.html";
         })
         .catch((error) => {
-<<<<<<< HEAD
         const errorCode = error.code;
         const errorMessage = error.message;
         // ..
         alert("The account may already exist")
-=======
-            console.error("Error:", error);
-            alert("Something went wrong, please try again");
->>>>>>> bd8882f (ok ji)
         });
 });

@@ -14,32 +14,19 @@ const getData = async () => {
     const docSnap = await getDoc(docRef);
     
     if (docSnap.exists()) {
-<<<<<<< HEAD
       data = docSnap.data();
       
-      document.getElementById("name").innerText = data.name
-      document.getElementById("email").innerText = user.email
-      document.getElementById("phone").innerText = data.phone
-      document.getElementById("location").innerText = data.location
-      document.getElementById("country").innerText = data.country
-=======
-        data = docSnap.data();
->>>>>>> bd8882f (ok ji)
+      document.getElementById("name").innerText = data.name;  // Keep user's real name
+      document.getElementById("type").innerText = data.type ? data.type.toUpperCase() : "N/A";  // Show NGO/Restaurant
+      document.getElementById("email").innerText = user.email;
+      document.getElementById("phone").innerText = data.phone;
+      document.getElementById("location").innerText = data.location;
+      document.getElementById("country").innerText = data.country;
     } else {
         console.log("No such document!");
         return;
     }
-
-<<<<<<< HEAD
-=======
-    // Keep original name, only change the type
-    document.getElementById("name").innerText = data.name;  // Keep user's real name
-    document.getElementById("type").innerText = data.type ? data.type.toUpperCase() : "N/A";  // Show NGO/Restaurant
-    document.getElementById("email").innerText = user.email;
-    document.getElementById("phone").innerText = data.phone;
-    document.getElementById("location").innerText = data.location;
-    document.getElementById("country").innerText = data.country;
 };
->>>>>>> bd8882f (ok ji)
+
 
 getData();
