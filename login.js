@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword } from "firebase/auth"
-import { auth } from "./index.js"
+import { auth } from "./firebaaseapp.js"
 
 const login_form = document.getElementById("login")
 
@@ -17,14 +17,14 @@ login_form.addEventListener("submit", event => {
         .then((userCredential) => {
         const user = userCredential.user;
         console.log(user)
-        window.location.href = "/"
+        window.location.href = "/loggedhome.html"
         })
         .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         // ..
         console.log(errorCode, errorMessage)
-        window.location.href = "/"
+        window.location.href = "/loggedhome.html"
         });
 
     // You can now send these values to a server or process them as needed

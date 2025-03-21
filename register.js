@@ -1,4 +1,4 @@
-import { auth } from "./index.js"
+import { auth } from "./firebaaseapp.js"
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const register_form = document.getElementById("register")
