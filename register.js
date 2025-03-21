@@ -1,4 +1,4 @@
-import {auth} from "./index.js"
+import { auth } from "./index.js"
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const register_form = document.getElementById("register")
@@ -18,6 +18,9 @@ register_form.addEventListener("submit", event => {
         // Signed up 
         const user = userCredential.user;
         console.log(user)
+
+        window.location.href = "/profile.html"
+
         })
         .catch((error) => {
         const errorCode = error.code;
