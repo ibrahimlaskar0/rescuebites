@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="thankyou.css">
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1>Thank You, <span id="donorName"></span>!</h1>
+        <p>You have successfully donated <span id="donationAmount"></span> as a <span id="donationType"></span> donation.</p>
+        <img src="donation qr.png" alt="Thank You" class="thank-you-image">
+      
+    </div>
+
+    <script>
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Set donor details dynamically
+        document.getElementById("donorName").innerText = getQueryParam("name") || "Donor";
+        document.getElementById("donationAmount").innerText = getQueryParam("amount") || "an amount";
+        document.getElementById("donationType").innerText = getQueryParam("time") || "Monthly";
+    </script>
+</body>
+</html>

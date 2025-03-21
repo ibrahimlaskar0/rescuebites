@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Page</title>
+    <link rel="stylesheet" href="donation.css">
+</head>
+<body>
+    <div class="container">
+        <p>Select gift frequency</p>
+        <div class="time">
+            <span class="selected">Monthly</span>
+            <span>Onetime</span>
+        </div>
+        
+        <p>Select amount or enter your amount</p>
+        <div class="value">
+            <span class="money">₹10</span>
+            <span class="money">₹20</span>
+            <span class="money">₹30</span>
+            <span class="money">₹500</span>
+            <span class="money">₹60</span>
+        </div>
+
+        <input type="number" id="customAmount" placeholder="Enter your amount">
+
+        <div class="confirm">
+            <input type="checkbox" id="transactionFee">
+            <span> Yes, I'll generously add ₹25.93 each month to cover the transaction</span>
+        </div>
+
+        <div class="input">
+            <p>Name</p>
+            <input type="text" placeholder="Enter your name">
+            <p>Email</p>
+            <input type="text" placeholder="Enter your email">
+        </div>
+
+        <p>Give in honor of another person</p>
+        <button>Donate now</button>
+        <p>By donating, you agree to our <span class="blue">terms of services</span> and <span class="blue">privacy policy</span></p>    
+    </div>
+
+    <script src="donation.js"></script>
+</body>
+</html>
