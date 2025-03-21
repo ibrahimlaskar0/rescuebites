@@ -1,9 +1,9 @@
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { auth } from "./index.js"
 
-const signin_form = document.getElementById("signin")
+const login_form = document.getElementById("login")
 
-signin_form.addEventListener("submit", event => {
+login_form.addEventListener("submit", event => {
     event.preventDefault(); // Prevents the default form submission
 
     let email = document.getElementById("email").value;
@@ -12,10 +12,9 @@ signin_form.addEventListener("submit", event => {
     console.log("Email:", email);
     console.log("Password:", password);
 
-    // sign in
+    // log in
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-        // Signed up 
         const user = userCredential.user;
         console.log(user)
         })
