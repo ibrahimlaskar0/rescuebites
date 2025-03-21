@@ -7,7 +7,7 @@ const register_form = document.getElementById("register");
 register_form.addEventListener("submit", (event) => {
     event.preventDefault(); // Prevents the default form submission
 
-    let type = document.getElementById("type").value; // NGO or Restaurant
+    let user_type = document.getElementById("type").value; // NGO or Restaurant
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
     let name = document.getElementById("name").value;
@@ -15,7 +15,7 @@ register_form.addEventListener("submit", (event) => {
     let country = document.getElementById("country").value;
     let location = document.getElementById("location").value;
 
-    console.log("Type:", type);
+    console.log("Type:", user_type);
     console.log("Email:", email);
     console.log("Password:", password);
 
@@ -28,7 +28,7 @@ register_form.addEventListener("submit", (event) => {
 
             // Store user details in Firestore
             await setDoc(doc(db, "users", user.uid), {
-                type,  // Store NGO or Restaurant selection
+                user_type,  // Store NGO or Restaurant selection
                 name,
                 phone,
                 country,
