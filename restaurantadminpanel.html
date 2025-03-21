@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescue Bites</title>
+    <style>
+        /* Root Variables for Green Theme */
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #a5d6a7;
+            --text-color: #ffffff;
+            --bg-color: #e8f5e9;
+            --table-header: #1b5e20;
+        }
+
+        /* Basic Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: rgb(215, 255, 223);
+            display: flex;
+            justify-content: space-around;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            font-weight: bold;
+            background-color: green;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            background: #fffbfb;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: var(--table-header);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: var(--secondary-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Foods Donated</a>
+        <a href="#">Past Donations</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Foods Donated</h2>
+        <table>
+            <tr>
+                <th>Sl. No</th>
+                <th>Food Item</th>
+                <th>Quantity</th>
+                <th>Location</th>
+                <th>Pincode</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Rice</td>
+                <td>50 kg</td>
+                <td>Mumbai</td>
+                <td>400001</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Bread</td>
+                <td>100 Loaves</td>
+                <td>Delhi</td>
+                <td>110001</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Milk</td>
+                <td>30 Liters</td>
+                <td>Kolkata</td>
+                <td>700001</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
