@@ -16,15 +16,19 @@ login_form.addEventListener("submit", event => {
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
         const user = userCredential.user;
+
         console.log(user)
-        window.location.href = "/loggedhome.html"
+
+        localStorage.setItem("user", JSON.stringify(user))
+
+        // window.location.href = "/loggedhome.html"
         })
         .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         // ..
         console.log(errorCode, errorMessage)
-        window.location.href = "/loggedhome.html"
+        // window.location.href = "/loggedhome.html"
         });
 
     // You can now send these values to a server or process them as needed

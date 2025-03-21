@@ -24,14 +24,14 @@ register_form.addEventListener("submit", event => {
         const user = userCredential.user;
         
         console.log(user)
-        await setDoc(doc(db, "user", user.uid), {
+        await setDoc(doc(db, "users", user.uid), {
             name,
             phone,
             country,
             location
         })
 
-        // window.location.href = "/login.html"
+        window.location.href = "/login.html"
 
         })
         .catch((error) => {
