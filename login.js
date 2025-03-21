@@ -33,7 +33,7 @@ login_form.addEventListener("submit", event => {
             window.location.href = "/restaurantadmin.html"
         } else 
         {
-            window.location.href = "/loggedhome.html"
+            window.location.href = "/ngoadmin.html"
         }
         })
         .catch((error) => {
